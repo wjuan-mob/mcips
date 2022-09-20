@@ -1,7 +1,10 @@
 - Feature Name: Encrypted Memos
 - Start Date: (2021-06-18)
-- RFC PR: [mobilecoinfoundation/mcips#3](https://github.com/mobilecoinfoundation/mcips/pull/3)
-- MobileCoin Epic: None
+- MCIP PR: [mobilecoinfoundation/mcips#3](https://github.com/mobilecoinfoundation/mcips/pull/3)
+- Implementation PR: [mobilecoinfoundation/mobilecoin#814](https://github.com/mobilecoinfoundation/mobilecoin/pull/814)
+
+*Note:* This MCIP describes a memo which has had its size adjusted from 46 to 66 in MCIP #24. The changed byte tables are reflected there. 
+*Note:* This MCIP initially described a phased roll out plan for the feature, but this was updated by MCIP #26 and MCIP #33.
 
 *Note:* This MCIP describes a memo which has had its size adjusted from 46 to 66 in MCIP #24. The changed byte tables are reflected there. 
 
@@ -68,11 +71,10 @@ containing a `TxOut` that doesn't have a memo. This will enforce output uniformi
 
 The `e_memo` field is an optional field on every MobileCoin TxOut, starting with BLOCK_VERSION = 1.
 
-After an interim period, a release will be made that makes memos mandatory.
-(We will update this document to reflect when the interim period has ended.)
+*Note:* This MCIP initially described a phased roll out of this feature, but this has been
+updated by MCIP #26 and MCIP #33. This feature will become a required part of `TxOut`'s starting with block version 1.
 
-The release that makes memos mandatory will result in a new MRENCLAVE value for consensus, but not a new
-`BLOCK_VERSION` as it is not a breaking change to the ledger format.
+*Note:* This MCIP describes a memo which has had its size adjusted from 46 to 66 in MCIP #24. That [MCIP lists the changed byte tables](0024-increase-memo-field-size.md#this-is-an-update-to-the-values-from-3).
 
 *Note:* This MCIP describes a memo which has had its size adjusted from 46 to 66 in MCIP #24. That [MCIP lists the changed byte tables](0024-increase-memo-field-size.md#this-is-an-update-to-the-values-from-3).
 
@@ -284,7 +286,7 @@ and for many contributions that helped shape the proposal.
 # Unresolved questions
 [unresolved-questions]: #unresolved-questions
 
-- There are no unresolved questions which should be resolved by this RFC.
+- There are no unresolved questions which should be resolved by this MCIP.
 
 # Future possibilities
 [future-possibilities]: #future-possibilities
